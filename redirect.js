@@ -39,11 +39,6 @@
       return;
     }
 
-    if (typeof NEW_TAB_URL !== 'undefined' && isHttpUrl(NEW_TAB_URL)) {
-      window.location.href = NEW_TAB_URL;
-      return;
-    }
-
     showMessage('No New Tab URL is set yet. Click the LetaTab icon in the toolbar to choose one.');
   });
 })();
