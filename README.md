@@ -1,4 +1,4 @@
-# LetaTab
+# Leta Tab
 
 <p align="left">  
 <img src="https://github.com/user-attachments/assets/79b0c0a6-6caa-4d3f-bebb-c1facc760e06" alt="OG" width="15%">
@@ -19,9 +19,9 @@
 
 **Set your own New Tab page, in a click.**
 
-Every new tab defaults to the browser's own New Tab page, and there's no built-in way to point it at your own dashboard, search page, or anything else you'd rather see first - not without editing a file by hand, anyway. LetaTab lets you set any web address once, in a small popup, and every new tab opens straight to it from then on.
+Every new tab defaults to the browser's own New Tab page, and there's no built-in way to point it at your own dashboard, search page, or anything else you'd rather see first - not without editing a file by hand, anyway. Leta Tab lets you set any web address once, in a small popup, and every new tab opens straight to it from then on.
 
-"LetaTab" is a small, single-purpose extension for Chrome, Edge, Brave, and other Chromium-based browsers, and it's part of the LetaLab family of projects - you can find the rest of them at [https://LetaLab.eu](https://letalab.eu).
+"Leta Tab" is a small, single-purpose extension for Chrome, Edge, Brave, and other Chromium-based browsers, and it's part of the LetaLab family of projects - you can find the rest of them at [https://LetaLab.eu](https://letalab.eu).
 
 Website is created by me and I do everything that is in my limited power to make it [safe and private](https://www.ssllabs.com/ssltest/analyze.html?d=letalab.eu&hideResults=on&latest).
 
@@ -50,7 +50,7 @@ Website is created by me and I do everything that is in my limited power to make
 
 ## Get the extension
 
-The easiest way to install LetaTab is straight from your browser's official store:
+The easiest way to install Leta Tab is straight from your browser's official store:
 
 [![Chrome Web Store](https://img.shields.io/badge/Chrome%20Web%20Store-Install-blue)](ADD-THIS-LATER)
 [![Edge Add-ons](https://img.shields.io/badge/Edge%20Addons-Install-blue)](ADD-THIS-LATER)
@@ -59,11 +59,15 @@ Brave and other Chromium-based browsers can use the Chrome Web Store link above 
 
 ## Screenshots
 
-_Screenshots of the popup and New Tab page will be added here once the store listing is ready._
+<!-- Replace the two placeholder links below with your own uploaded Firefox screenshot URLs -->
+
+| Popup | New Tab Configuration |
+|---|---|
+| <a href="https://github.com/user-attachments/assets/9ee0ebc0-f714-4ec2-ab9b-0afa0937a917"><img width="100%" alt="Popup" src="https://github.com/user-attachments/assets/9ee0ebc0-f714-4ec2-ab9b-0afa0937a917" /></a> | <a href="https://github.com/user-attachments/assets/cb56f0f2-bdab-4135-9c66-86c42e0e468e"><img width="100%" alt="New Tab Configuration" src="https://github.com/user-attachments/assets/cb56f0f2-bdab-4135-9c66-86c42e0e468e" /></a> |
 
 ## Features
 
-- Set any web address as your New Tab page from a small popup - no more editing `config.js` by hand
+- Set any web address as your New Tab page from a small popup
 - Your choice is saved instantly through `chrome.storage.sync` and stays put - no re-prompting, no reset on browser restart
 - A simple ON/OFF toggle in the popup lets you pause the redirect without uninstalling anything - when it's off, a new tab shows a plain message instead
 - Falls back to a sensible built-in default address until you choose your own, so the extension is never left pointing nowhere
@@ -73,7 +77,7 @@ _Screenshots of the popup and New Tab page will be added here once the store lis
 
 ## How it works
 
-LetaTab uses Chrome's `chrome_url_overrides` manifest key, the API built for exactly this purpose, to replace the browser's New Tab page with its own page (`newtab.html`).
+Leta Tab uses Chrome's `chrome_url_overrides` manifest key, the API built for exactly this purpose, to replace the browser's New Tab page with its own page (`newtab.html`).
 
 The new page reads `chrome.storage.sync` as soon as it loads. If you've saved an address in the popup and the extension is enabled, it sends the browser straight there. If you haven't saved one yet, it falls back to the default address in `config.js`, and if even that's missing, it shows a short message instead of a blank page.
 
@@ -104,15 +108,15 @@ That's genuinely all of it - no host permissions, no `<all_urls>`, no `tabs`, no
 - Exactly two values are ever stored, using the browser's own `chrome.storage.sync`: the New Tab address, and the on/off state
 - No remote code loading - the full source ships inside the installed package, nothing is fetched or evaluated at runtime
 - No host permissions of any kind - the extension can't read or modify any website's content, it only opens the one address you chose, the same as typing it yourself
-- Full details live in the [Privacy Policy](https://letalab.eu/LetaTab/Privacy_Policy.html), also hosted at [https://LetaLab.eu](https://letalab.eu)
+- Full details live in the [Privacy Policy](https://letalab.eu/Leta Tab/Privacy_Policy.html), also hosted at [https://LetaLab.eu](https://letalab.eu)
 
 ## Known issues and support
 
-LetaTab relies only on Chrome's documented `chrome_url_overrides` API, not a workaround, so there's no equivalent to the undocumented-API risk some other extensions carry.
+Leta Tab relies only on Chrome's documented `chrome_url_overrides` API, not a workaround, so there's no equivalent to the undocumented-API risk some other extensions carry.
 
 If another installed extension also overrides the New Tab page, Chrome and Edge only let one override apply at a time - generally whichever one was installed most recently. If your new tab isn't opening where you expect, that's the first thing to check.
 
-Running into that, or anything else that doesn't behave the way it should? Open a thread in [Issues](https://github.com/LetaLab/LetaTab/issues).
+Running into that, or anything else that doesn't behave the way it should? Open a thread in [Issues](https://github.com/LetaLab/Leta Tab/issues).
 
 ## Directory structure
 
