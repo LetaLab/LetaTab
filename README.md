@@ -122,7 +122,7 @@ Running into that, or anything else that doesn't behave the way it should? Open 
 │   ├── config.js                fallback New Tab address, used until you set your own
 │   ├── newtab.html               the overridden New Tab page
 │   ├── redirect.js               reads chrome.storage.sync and redirects, or shows a short message
-│   ├── favicon.png / favicon.svg
+│   ├── favicon.png
 │   ├── favicon-16.png / favicon-32.png / favicon-128.png
 │   ├── popup/
 │   │   ├── popup.html
